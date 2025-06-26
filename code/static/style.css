@@ -1,0 +1,118 @@
+/* Reset spacing and box model */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    background: linear-gradient(to right, #e3f2fd, #fce4ec);
+    min-height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    padding: 40px 20px;
+}
+
+/* Main form box */
+form {
+    background-color: #ffffff;
+    padding: 30px;
+    border-radius: 16px;
+    box-shadow: 0 10px 25px rgba(0, 0, 0, 0.15);
+    width: 100%;
+    max-width: 600px;
+    border: 2px solid #bbdefb;
+    transition: transform 0.3s ease;
+}
+
+/* Title */
+h2 {
+    text-align: center;
+    margin-bottom: 25px;
+    color: #2c387e;
+}
+
+/* Container for two-column layout */
+.form-row {
+    display: flex;
+    justify-content: space-between;
+    gap: 20px;
+}
+
+/* Each form group (half-width input box) */
+.form-group {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+}
+
+/* Label styles */
+label {
+    font-weight: 600;
+    color: #333;
+    margin-bottom: 6px;
+}
+
+/* Input and select styles */
+input[type="text"],
+select {
+    padding: 12px 10px;
+    border: 1.8px solid #cfd8dc;
+    border-radius: 10px;
+    font-size: 15px;
+    transition: border-color 0.3s ease, box-shadow 0.3s ease;
+    width: 100%;
+}
+
+input[type="text"]:focus,
+select:focus {
+    border-color: #64b5f6;
+    box-shadow: 0 0 8px rgba(100, 181, 246, 0.3);
+    outline: none;
+}
+
+/* Submit button */
+input[type="submit"] {
+    margin-top: 24px;
+    width: 100%;
+    background: linear-gradient(90deg, #42a5f5, #7e57c2);
+    color: #fff;
+    border: none;
+    padding: 14px;
+    font-size: 16px;
+    font-weight: bold;
+    border-radius: 12px;
+    cursor: pointer;
+    transition: background 0.4s ease, transform 0.2s ease;
+}
+
+input[type="submit"]:hover {
+    background: linear-gradient(90deg, #7e57c2, #42a5f5);
+    transform: scale(1.03);
+}
+
+/* Prediction result */
+h3 {
+    margin-top: 20px;
+    text-align: center;
+    color: #1b5e20;
+    font-weight: 600;
+}
+
+/* Stack form fields vertically on small screens */
+@media (max-width: 700px) {
+    .form-row {
+        flex-direction: column;
+    }
+
+    form {
+        padding: 20px;
+    }
+
+    h2 {
+        font-size: 22px;
+    }
+}
